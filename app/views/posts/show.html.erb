@@ -1,0 +1,34 @@
+<h1><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</h1>
+<div>
+  <p>メインタイトル：<%= @post.main_title %></p>
+  <%= image_tag @post.images[0].to_s %>
+  <%= image_tag @post.images[1].to_s %>
+  <p>行った日：<%= @post.date.strftime('%Y/%m/%d') %></p>
+  <p>場所：<%= @post.location %></p>
+  <p>サブタイトル：<%= @post.sub_title %></p>
+  <p>内容：<%= @post.body %></p>
+  <% if @post.user == current_user %>
+    <%= link_to "編集", edit_post_path(@post) %>
+  <% end %>
+  <% if @post.user == current_user %>
+    <%= link_to "削除", post_path(@post), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"} %>
+  <% end %>
+
+  <!--いいね機能-->
+  <div id="like_buttons_<%= @post.id %>">
+    <%= render "likes/like", post: @post %>
+  </div>
+
+  <!--コメント一覧-->
+  <div id="comments_area">
+    <%= render 'comments/post_comments', post: @post %>
+  </div>
+
+  <!--コメント作成フォーム-->
+  <div class="new-comment">
+    <%= render 'comments/form', post: @post, comment: @comment %>
+  </div>
+</div>
+<%= link_to t("button.back"), "/" %>
+
+

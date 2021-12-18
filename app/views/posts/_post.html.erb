@@ -1,0 +1,10 @@
+<%= link_to post_path(post.id) do %>
+  <%= image_tag post.images[0].to_s %>
+<% end %>
+
+<p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
+<p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
+<p>投稿者：<%= link_to "#{post.user.name}", user_path(post.user) %>さん</p>
+<div id="like_buttons_<%= post.id %>">
+  <%= render "likes/index_like", post: post %>
+</div>

@@ -1,0 +1,47 @@
+<% if user_signed_in? && @user.id == current_user.id %>
+  <h1>マイページ</h1>
+  <p><%= link_to "会員情報を編集する", edit_user_path(@user) %></p>
+  <p><%= link_to "いいねした投稿", likes_user_path(@user) %></p>
+<% else %>
+  <h3><%= @user.name %>さん</h3>
+<% end %>
+
+<!--ユーザー情報表示-->
+<%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
+<h3><%= @user.address %></h3>
+<h4><%= @user.introduction %></h4>
+
+<!--フォロワー数表示-->
+<div class="follower">
+  <%= link_to followers_user_path(@user.id) do %>
+    <h5 style="color: black;">フォロワー<%= @user.followers.count %>人</h5>
+  <% end %>
+</div>
+
+<!--フォロー数表示-->
+<div class="follow">
+  <%= link_to following_user_path(@user.id) do %>
+    <h5 style="color: black;">フォロー<%= @user.following.count %>人</h5>
+  <% end %>
+</div>
+
+<!--フォローボタン-->
+<div>
+  <%= render "follow_form" %>
+</div>
+
+<!--ユーザーの投稿一覧表示-->
+<h3>投稿</h3>
+<% @posts.each do |post| %>
+<div>
+  <%= link_to post_path(post.id) do %>
+    <%= image_tag post.images[0].to_s %>
+  <% end %>
+  <p>メインタイトル：
+    <%= link_to post_path(post.id) do %>
+      <%= post.main_title %>
+    <% end %>
+  </p>
+  <p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
+</div>
+<% end %>

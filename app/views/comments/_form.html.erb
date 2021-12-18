@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <%= form_with( model:[post, comment] ) do |f| %>
+    <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+    <%= f.submit "送信する" %>
+  <% end %>
+<% else %>
+  <%= link_to "ログインしてコメントを送る", new_user_session_path %>
+<% end %>

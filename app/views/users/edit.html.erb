@@ -1,0 +1,33 @@
+<h1>会員情報編集ページ</h1>
+
+<%= form_with model:@user, local:true do |f| %>
+  <%= attachment_image_tag @user, :image, :fill, 100, 100, fallback: "no_image.jpg"%></br>
+  <label for="inputImage">プロフィール画像</label>
+  <%= f.attachment_field :image, placeholder: "プロフィール画像" %>
+
+  <div class="field">
+    <%= f.label "ユーザーネーム" %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "お住まい" %><br />
+    <%= f.select :address, User.address_areas.keys, {}, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "自己紹介文" %><br />
+    <%= f.text_area :introduction, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "メールアドレス" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新する" %>
+  </div>
+
+<% end %>
+<%= link_to "退会する", users_quit_path %>

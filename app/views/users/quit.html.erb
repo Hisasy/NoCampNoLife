@@ -1,0 +1,10 @@
+<h5 class="title">退会お手続き</h5>
+
+<p>
+  退会お手続きを完了されますと、投稿やいいねの一部サービスが</br>
+  ご利用いただけなくなります。</br>
+  本当に退会してもよろしいですか？
+</p>
+
+<%= link_to "退会する", users_out_path, method: :patch, data: { confirm: "【確認】本当に退会しますか？" } %>
+<%= link_to "退会しない", user_path(current_user) %>

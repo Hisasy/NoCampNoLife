@@ -1,0 +1,16 @@
+<h1>投稿編集ページ</h1>
+<%= form_with model: @post, local:true do |f| %>
+  <h4>タイトル</h4>
+  <%= f.text_field :main_title %>
+  <h4>行った日</h4>
+  <%= f.date_field :date %>
+  <h4>場所</h4>
+  <%= f.text_field :location %>
+  <h4>写真</h4>
+  <%= f.file_field :images, multiple: true %>
+  <h4>サブタイトル</h4>
+  <%= f.text_field :sub_title %>
+  <h4>内容</h4>
+  <%= f.text_area :content %>
+  <%= f.submit '編集完了' %>
+<% end %>
