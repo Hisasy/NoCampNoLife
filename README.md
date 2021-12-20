@@ -38,15 +38,15 @@
 
 ## チャレンジ要素一覧
 
-####主な機能
-・フォロー・フォロワー機能（非同期通信）
-・ユーザー認証（devise使用）
-・いいね機能（非同期通信）
-・画像アップロード機能（CarrierWave使用）
-・コメント機能（非同期通信）
-・投稿一覧（画像スライダー）
-・環境変数化（dotenv-rails）
-・外部ストレージ導入（AWS S3使用）
+#### 主な機能
+- フォロー・フォロワー機能（非同期通信）
+- ユーザー認証（devise使用）
+- いいね機能（非同期通信）
+- 画像アップロード機能（CarrierWave使用）
+- コメント機能（非同期通信）
+- 投稿一覧（画像スライダー）
+- 環境変数化（dotenv-rails）
+- 外部ストレージ導入（AWS S3使用）
 
 機能の詳細は[こちらから](https://docs.google.com/spreadsheets/d/1OdkkPlLWHUi1p8kAkUI4DhZgdOBXfez5NWGoNEY0fGo/edit?usp=sharing)
 
