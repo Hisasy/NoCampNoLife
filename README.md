@@ -38,7 +38,7 @@
 
 ## チャレンジ要素一覧
 
-主な機能
+####主な機能
 ・フォロー・フォロワー機能（非同期通信）
 ・ユーザー認証（devise使用）
 ・いいね機能（非同期通信）
@@ -48,7 +48,7 @@
 ・環境変数化（dotenv-rails）
 ・外部ストレージ導入（AWS S3使用）
 
-詳細は[こちらから](https://docs.google.com/spreadsheets/d/1OdkkPlLWHUi1p8kAkUI4DhZgdOBXfez5NWGoNEY0fGo/edit?usp=sharing)
+機能の詳細は[こちらから](https://docs.google.com/spreadsheets/d/1OdkkPlLWHUi1p8kAkUI4DhZgdOBXfez5NWGoNEY0fGo/edit?usp=sharing)
 
 ## 開発環境
 
