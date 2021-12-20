@@ -25,25 +25,20 @@
 
 ## 設計書
 
-・WBS
-<https://docs.google.com/spreadsheets/d/1VPZKwoelJ6GSsDgHiKasNYXB_mfANHe3QI6CQPriuiY/edit?usp=sharing>
+・[WBS](https://docs.google.com/spreadsheets/d/1VPZKwoelJ6GSsDgHiKasNYXB_mfANHe3QI6CQPriuiY/edit?usp=sharing)
 
-・UI flows
-<https://drive.google.com/file/d/1qQozuvA3fvDWsKrJvTJU7UYWbh6AMpf2/view?usp=sharing>
+・[UI flows](https://drive.google.com/file/d/1qQozuvA3fvDWsKrJvTJU7UYWbh6AMpf2/view?usp=sharing)
 
-・ワイヤーフレーム
-<https://drive.google.com/file/d/12yU_rqsCUPYscLcho9XS0OhT-Zo5guvl/view?usp=sharing>
+・[ワイヤーフレーム](https://drive.google.com/file/d/12yU_rqsCUPYscLcho9XS0OhT-Zo5guvl/view?usp=sharing)
 
-・テーブル定義書
-<https://docs.google.com/spreadsheets/d/1DUOGGpEBQOsvO2HWHn_v371QVekmIizVTrxG4Qts2oU/edit?usp=sharing>
+・[テーブル定義書](https://docs.google.com/spreadsheets/d/1DUOGGpEBQOsvO2HWHn_v371QVekmIizVTrxG4Qts2oU/edit?usp=sharing)
 
-・アプリケーション詳細設計書
-<https://docs.google.com/spreadsheets/d/1GnXyfU5WRA2kwH7QssCs73HUM0oR-l6e/edit?usp=sharing&ouid=110991163930681200475&rtpof=true&sd=true>
+・[アプリケーション詳細設計書](https://docs.google.com/spreadsheets/d/1GnXyfU5WRA2kwH7QssCs73HUM0oR-l6e/edit?usp=sharing&ouid=110991163930681200475&rtpof=true&sd=true)
 
 
 ## チャレンジ要素一覧
 
-<https://docs.google.com/spreadsheets/d/1OdkkPlLWHUi1p8kAkUI4DhZgdOBXfez5NWGoNEY0fGo/edit?usp=sharing>
+[こちらから](https://docs.google.com/spreadsheets/d/1OdkkPlLWHUi1p8kAkUI4DhZgdOBXfez5NWGoNEY0fGo/edit?usp=sharing)
 
 ## 開発環境
 
@@ -52,3 +47,4 @@
 - フレームワーク：Ruby on Rails
 - JS ライブラリ：jQuery
 - IDE：Cloud9
+- 外部ストレージ：AWS S3
