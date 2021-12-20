@@ -7,6 +7,9 @@
 <% end %>
 
 <!--ユーザー情報表示-->
+<% if user_signed_in? && @user.id == current_user.id %>
+  <h3><%= @user.name %></h3>
+<% end %>
 <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
 <h3><%= @user.address %></h3>
 <h4><%= @user.introduction %></h4>
@@ -37,11 +40,7 @@
   <%= link_to post_path(post.id) do %>
     <%= image_tag post.images[0].to_s %>
   <% end %>
-  <p>メインタイトル：
-    <%= link_to post_path(post.id) do %>
-      <%= post.main_title %>
-    <% end %>
-  </p>
+  <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
   <p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
 </div>
 <% end %>

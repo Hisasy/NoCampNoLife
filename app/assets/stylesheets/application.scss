@@ -16,6 +16,19 @@
  @import "bootstrap";
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
+ @import "slick-theme";
+ @import "slick";
+
+ .SiteWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 15vh;
+ }
+
+ main {
+  flex: 1;
+  oxerflow-x: hidden;
+ }
 
  .notice {
   background-color: lightgreen;
@@ -28,3 +41,5 @@
   color: #white;
   text-align: center;
 }
+
+

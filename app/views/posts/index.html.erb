@@ -1,13 +1,20 @@
 <h3>投稿一覧</h3>
 
-<% @posts.each do |post| %>
-  <div>
-    <%= image_tag post.images[0].to_s %>
-    <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
-    <p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
-    <p>投稿者：<%= link_to "#{post.user.name}", user_path(post.user) %>さん</p>
-    <div id="like_buttons_<%= post.id %>">
-      <%= render "likes/index_like", post: post %>
-    </div>
+<div class="sliderArea">
+  <div class="full-screen slider">
+    <% @posts.each do |post| %>
+      <div>
+        <div class="image"><%= link_to image_tag(post.images[0].to_s), post_path(post.id) %></div>
+        <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
+        <% if post.date %>
+          <p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
+        <% end %>
+        <p>投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</p>
+        <div id="like_buttons_<%= post.id %>">
+          <%= render "likes/index_like", post: post %>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+

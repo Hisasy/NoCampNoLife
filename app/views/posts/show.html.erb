@@ -1,12 +1,17 @@
 <h1><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</h1>
 <div>
   <p>メインタイトル：<%= @post.main_title %></p>
-  <%= image_tag @post.images[0].to_s %>
-  <%= image_tag @post.images[1].to_s %>
-  <p>行った日：<%= @post.date.strftime('%Y/%m/%d') %></p>
+  <% if @post.date %>
+    <p>行った日：<%= @post.date.strftime('%Y/%m/%d') %></p>
+  <% end %>
   <p>場所：<%= @post.location %></p>
   <p>サブタイトル：<%= @post.sub_title %></p>
   <p>内容：<%= @post.body %></p>
+  <% @post.images.each do |image| %>
+    <%= image_tag image.to_s, size: '300x200' %>
+  <% end %>
+
+
   <% if @post.user == current_user %>
     <%= link_to "編集", edit_post_path(@post) %>
   <% end %>
