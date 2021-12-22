@@ -18,11 +18,12 @@
 //= require activestorage
 
 //= require jquery
+//= require jquery_ujs
 //= require_tree .
 /*global $*/
 
 $(document).on('ready', function() {
-  $(".full-screen").slick({
+  $(".full-screen-o").slick({
     centerMode: true,
     centerPadding: '5%',
     dots: true,

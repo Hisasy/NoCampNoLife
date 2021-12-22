@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.page(params[:page]).reverse_order
+    @posts = Post.all.order(created_at: :desc)
 
   end
 
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to "/"
+      redirect_to post_path(@post.id)
     else
       render :new
     end

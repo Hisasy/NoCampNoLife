@@ -10,9 +10,11 @@
 <% if user_signed_in? && @user.id == current_user.id %>
   <h3><%= @user.name %></h3>
 <% end %>
-<%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
-<h3><%= @user.address %></h3>
-<h4><%= @user.introduction %></h4>
+<div class="profile-image">
+  <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
+</div>
+<h4>お住まい：<%= @user.address %></h4>
+<h4>自己紹介：<%= @user.introduction %></h4>
 
 <!--フォロワー数表示-->
 <div class="follower">

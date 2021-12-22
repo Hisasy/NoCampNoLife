@@ -2,7 +2,7 @@
 <div>
   <p>メインタイトル：<%= @post.main_title %></p>
   <% if @post.date %>
-    <p>行った日：<%= @post.date.strftime('%Y/%m/%d') %></p>
+    <p>行った日：<%= @post.date.strftime('%Y年%m月%d日') %></p>
   <% end %>
   <p>場所：<%= @post.location %></p>
   <p>サブタイトル：<%= @post.sub_title %></p>

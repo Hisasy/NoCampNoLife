@@ -4,8 +4,10 @@
     <title>NoCampNoLife</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,36 +15,41 @@
   </head>
 
   <body>
-    <div class="SiteWrapper">
-      <header></header>
+    <header class="top-page-header">
+      <div class="header-top-content">
+        <%= link_to "/", class:"header-title" do %>
+          <div>No Camp No Life</div>
+          <div class="header-sub-title">～ キャンプをもっと楽しく ～</div>
+        <% end %>
+
+        <div class="nav">
+          <ul class="lists-right">
+            <% if user_signed_in? %>
+              <li><%= link_to "投稿する", new_post_path, class: "post-new" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+              <li><%= link_to "マイページ", user_path(current_user.id), class: "mypage" %></li>
+            <% else %>
+              <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up" %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="header-center-top">人生に「遊び」を</div>
+        <div class="header-center-bottom">No Camp No Life</div>
+      </div>
+    </header>
+
+    <!--<div class="SiteWrapper">-->
       <main>
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "#{key}") %>
-        <% end %>
-        <li>
-          <%= link_to "トップページ", "/" %>
-        </li>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to "投稿する", new_post_path %>
-          </li>
-          <li>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </li>
-          <li>
-            <%= link_to "マイページ", user_path(current_user.id) %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "新規登録", new_user_registration_path %>
-          </li>
-          <li>
-            <%= link_to "ログイン", new_user_session_path %>
-          </li>
-        <% end %>
+        <!--% flash.each do |key, value| %>-->
+        <!--  %= content_tag(:div, value, class: "#{key}") %>-->
+        <!--% end %>-->
       </main>
       <footer></footer>
-    </div>
+    <!--</div>-->
     <%= yield %>
-  </body>
+    </div>
 </html>
