@@ -1,34 +1,52 @@
-<div class="sliderArea">
-  <div class="full-screen-o slider">
-    <% @posts.each do |post| %>
-      <div>
-        <div class="image"><%= link_to image_tag(post.images[0].to_s), post_path(post.id) %></div>
-        <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
-        <% if post.date %>
-          <p>行った日：<%= post.date.strftime('%Y年%m月%d日') %></p>
-        <% end %>
-        <p>投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</p>
-        <div id="like_buttons_<%= post.id %>">
-          <%= render "likes/index_like", post: post %>
+ <main>
+  <div class="sliderArea">
+    <div class="full-screen-o slider">
+      <% @post_5.each do |post| %>
+        <div class="slider-box">
+          <div class="image"><%= link_to image_tag(post.images[0].to_s), post_path(post.id) %></div>
+          <din class="post-content">
+            <div class="post-content-main-title">「<%= link_to post.main_title, post_path(post.id) %>」</div>
+            <% if post.date %>
+              <div class="post-content-date"><%= post.date.strftime('%Y年%m月%d日') %></div>
+            <% end %>
+            <div class="post-content-user">投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</div>
+            <div class="likes-button">
+              <div id="like_buttons_<%= post.id %>">
+              <%= render "likes/index_like", post: post %>
+              </div>
+            </div>
+          </din>
         </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="post-area">
-  <h1 class="post-area-title">～新着投稿一覧～</h1>
-  <% @posts.each do |post| %>
-    <div class="post-box">
-      <div class="image"><%= link_to image_tag(post.images[0].to_s, size: '300x200'), post_path(post.id) %></div>
-        <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
-        <% if post.date %>
-          <p>行った日：<%= post.date.strftime('%Y年%m月%d日') %></p>
-        <% end %>
-        <p>投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</p>
-        <div id="like_buttons_<%= post.id %>">
-          <%= render "likes/index_like", post: post %>
-        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
+
+  <div class="post-area">
+    <div class="inner">
+      <h1 class="post-area-title">新着投稿一覧</h1>
+      <section class="post-list">
+        <% @posts.each do |post| %>
+        <div class="post-box">
+          <% if post.new_arrival? == true %>
+            <%= render 'new_label' %>
+          <% end %>
+          <div class="background-image">
+            <%= link_to image_tag(post.images[0].to_s, size: '300x200'), post_path(post.id) %>
+          </div>
+          <p class="main-title">「<%= post.main_title %>」</p>
+          <p class="post-place"><%= post.location %></p>
+          <p class="post-info">
+            <% if post.date %>
+            <p class="post-date"><%= post.date.strftime('%Y年%m月%d日') %></p>
+            <% end %>
+          </p>
+          <div class="post-like" id="like_buttons_<%= post.id %>">
+            <%= render "likes/index_like", post: post %>
+          </div>
+          <p class="user-name">投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</p>
+        </div>
+      <% end %>
+      </section>
+    </div>
+  </div>
+</main>

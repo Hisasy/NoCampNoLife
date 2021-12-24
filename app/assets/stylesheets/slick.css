@@ -26,7 +26,7 @@ html, body {
 .slick-slide img {
   width: 100%;
   height: 30vw;
-  max-height: 200px;
+  max-height: 300px;
   min-height: 100px;
 }
 .slick-prev, .slick-next {
@@ -66,12 +66,13 @@ html, body {
 .full-screen-o
 ====================================================================*/
 
-.full-screen-o .slick-list {
-  overflow: visible;
-}
+/*.full-screen-o .slick-list {*/
+  /*overflow: visible;*/
+  /*width: 100%;*/
+/*}*/
 
 .full-screen-o.slider {
-  max-width: 300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 

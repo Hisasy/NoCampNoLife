@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
+    @post_5 = Post.last(5)
     @posts = Post.all.order(created_at: :desc)
+
 
   end
 
@@ -28,8 +30,9 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.update(post_params)
-    redirect_to post_path
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to post_path(post)
   end
 
   def destroy

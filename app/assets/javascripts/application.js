@@ -25,9 +25,9 @@
 $(document).on('ready', function() {
   $(".full-screen-o").slick({
     centerMode: true,
-    centerPadding: '5%',
+    centerPadding: '35%',
     dots: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     speed: 1000,
     infinite: true,

@@ -43,13 +43,21 @@
     </header>
 
     <!--<div class="SiteWrapper">-->
-      <main>
+      <!--<main>-->
         <!--% flash.each do |key, value| %>-->
         <!--  %= content_tag(:div, value, class: "#{key}") %>-->
         <!--% end %>-->
-      </main>
-      <footer></footer>
-    <!--</div>-->
+      <!--</main>-->
     <%= yield %>
+    <footer>
+      <ul class="footer-menu">
+        <li>home ｜</li>
+        <li>about ｜</li>
+        <li>service ｜</li>
+        <li>Contact Us</li>
+      </ul>
+      <p>COPYRIGHT © NoCampNoLifeInc. All rights Reserved.</p>
+    </footer>
+    <!--</div>-->
     </div>
 </html>
