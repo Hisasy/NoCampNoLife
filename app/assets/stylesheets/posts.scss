@@ -112,6 +112,7 @@
   padding-left: 10px;
 }
 
+
 // <-----------post-index----------->
 .post-area {
   margin-top: 100px;
@@ -244,9 +245,29 @@
   text-align: center;
 }
 
+.post-show-header {
+  margin-top: 40px;
+  padding: 2px;
+  border-bottom: 3px solid #D3D3D3;
+}
+
+.post-show-header p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.post-show-header span {
+
+}
+
 .post-show-user {
   font-size: 30px;
   font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
 }
 
+// <-----------comment-area----------->
+.comment-area {
+  padding: 10px;
+  background: #f7f7f7;
+}
 

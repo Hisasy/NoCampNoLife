@@ -1,15 +1,27 @@
-<% if post.comments.present? %>
-  <p>コメント件数：<%= post.comments.count %></p>
-  <% post.comments.each do |comment| %>
-    <%= comment.user.name %>
-    <%= l comment.created_at, format: :short %></br>
-    <%= comment.comment %></br>
-    <% if comment.user == current_user %>
-      <div class="comment-delete">
-        <%= link_to "削除", post_comment_path(comment.post, comment), method: :delete, remote: true, data: {confirm: "本当に削除しますか？"} %>
-      </div></br>
+<div class="comment-area">
+  <% if post.comments.present? %>
+    <!--<p>コメント件数：%= post.comments.count %></p>-->
+    <!--<div class="comment-box">-->
+    <% post.comments.each do |comment| %>
+      <div class="comment-card">
+        <div class="comment-icon">
+          <div class="icon-image"></div>
+        </div>
+        <div class="comment-user-profile">
+          <p><%= comment.user.name %>
+            <span><%= l comment.created_at, format: :short %></span>
+          </p>
+        </div>
+        <p class="comment-body"><%= comment.comment %></p>
+        <% if comment.user == current_user %>
+          <div class="comment-delete">
+            <%= link_to "削除", post_comment_path(comment.post, comment), method: :delete, remote: true, data: {confirm: "本当に削除しますか？"} %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
+    <!--</div>-->
+  <% else %>
+    <div class="no-comment">コメントはまだありません</div>
   <% end %>
-<% else %>
-  <p>コメントはまだありません</p>
-<% end %>
+</div>

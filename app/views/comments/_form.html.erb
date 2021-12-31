@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <%= form_with( model:[post, comment] ) do |f| %>
-    <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+    <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに", :size=>"50x2" %>
     <%= f.submit "送信する" %>
   <% end %>
 <% else %>

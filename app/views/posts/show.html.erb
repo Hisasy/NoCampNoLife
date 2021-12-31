@@ -1,6 +1,9 @@
 <div class="post-show">
-  <h1 class="post-show-user"><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</h1>
-  <div class="post-show-main-title">「<%= @post.main_title %>」</div>
+  <div class="post-show-header">
+    <p>「<%= @post.main_title %>」
+      <span><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</span>
+    </p>
+  </div>
   <% if @post.date %>
     <div class="post-show-date"><%= @post.date.strftime('%Y年%m月%d日') %></div>
   <% end %>
@@ -24,14 +27,16 @@
   </div>
 
   <!--コメント一覧-->
-  <div id="comments_area">
-    <%= render 'comments/post_comments', post: @post %>
+  <div class="comment-area">
+    <div id="comments_area">
+      <%= render 'comments/post_comments', post: @post %>
+    </div>
+  <!--コメント作成フォーム-->
+    <div class="new-comment">
+      <%= render 'comments/form', post: @post, comment: @comment %>
+    </div>
   </div>
 
-  <!--コメント作成フォーム-->
-  <div class="new-comment">
-    <%= render 'comments/form', post: @post, comment: @comment %>
-  </div>
   <%= link_to t("button.back"), "/" %>
 </div>
 
