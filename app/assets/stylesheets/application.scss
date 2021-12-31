@@ -44,8 +44,8 @@
  }
 
  main {
+  height: 100%;
   width: 100%;
-  margin-top: 5vh;
   flex: 1;
   oxerflow-x: hidden;
  }
@@ -62,10 +62,11 @@
   text-align: center;
 }
 
-.top-page-header {
+header {
  width: 100%;
  padding: 10px 0 20px 0;
  // position: fixed;
+ box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
  top: 0;
  height: 20vh;
  background-image: url('1.jpg');
@@ -170,6 +171,8 @@ footer{
  color: white;
  text-align: center;
  background: #BDB76B;
+ position: absolute;
+ bottom: 0
 }
 
 .footer-menu {

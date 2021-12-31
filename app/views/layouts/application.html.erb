@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <header class="top-page-header">
+    <header>
       <div class="header-top-content">
         <%= link_to "/", class:"header-title" do %>
           <div>No Camp No Life</div>
@@ -41,14 +41,15 @@
         <div class="header-center-bottom">No Camp No Life</div>
       </div>
     </header>
-
     <!--<div class="SiteWrapper">-->
       <!--<main>-->
         <!--% flash.each do |key, value| %>-->
         <!--  %= content_tag(:div, value, class: "#{key}") %>-->
         <!--% end %>-->
       <!--</main>-->
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
     <footer>
       <ul class="footer-menu">
         <li>home ｜</li>

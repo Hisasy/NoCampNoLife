@@ -2,11 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post-form {
-  position: center;
-  text-align: center;
-  background-color: brown;
+// <-----------post-new----------->
+.post-form-title-box {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
+
+.post-form-title {
+  text-align: center;
+  margin-top: 50px;
+  width: auto;
+  font-size: 30px;
+}
+
+.post-form-sub-title {
+  text-align: center;
+  margin-top: 20px;
+  width: auto;
+  font-size: 15px;
+}
+
+.post-form-area {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background: #f7f7f7;
+  min-height: 500px;
+  text-align: center;
+}
+
+.post-form-inner {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.main-title-form {
+  padding-top: 30px;
+}
+
+.date-form {
+  padding-top: 30px;
+}
+
+.location-form {
+  padding-top: 30px;
+}
+
+.sub-title-form {
+  padding-top: 30px;
+}
+
+.image-form {
+  padding-top: 30px;
+}
+
+.body-form {
+  padding-top: 30px;
+}
+
+.submit-button {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 
 .slider-box {
   position: relative;
@@ -37,9 +95,16 @@
   margin-bottom: 10px;
 }
 
+.post-content-place {
+  color: black;
+  font-size: 13px;
+  font-weight: 700;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
 .post-content-user {
   padding-left: 10px;
-
 }
 
 .likes-button {
@@ -47,10 +112,13 @@
   padding-left: 10px;
 }
 
+// <-----------post-index----------->
 .post-area {
   margin-top: 100px;
+  margin-bottom: 100px;
   background: #f7f7f7;
   min-height: 500px;
+
 }
 
 .inner {
@@ -97,7 +165,6 @@
   border-radius: 4px;
 }
 
-
 .post-date {
   box-sizing: border-box;
   // position: absolute;
@@ -110,15 +177,15 @@
   font-weight: 700;
 }
 
-.post-info {
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  color: #fff;
-}
+// .post-date {
+//   box-sizing: border-box;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   padding: 10px;
+//   color: #fff;
+// }
 
 .main-title {
   background-color: #FFFFDD;
@@ -167,5 +234,19 @@
   -webkit-transform: rotate(45deg);
 }
 
+// <-----------post-show----------->
+.post-show {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.post-show-user {
+  font-size: 30px;
+  font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+}
 
 

@@ -1,19 +1,15 @@
 <div class="post-show">
-  
-</div>
-<h1><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</h1>
-<div>
-  <p>メインタイトル：<%= @post.main_title %></p>
+  <h1 class="post-show-user"><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</h1>
+  <div class="post-show-main-title">「<%= @post.main_title %>」</div>
   <% if @post.date %>
-    <p>行った日：<%= @post.date.strftime('%Y年%m月%d日') %></p>
+    <div class="post-show-date"><%= @post.date.strftime('%Y年%m月%d日') %></div>
   <% end %>
-  <p>場所：<%= @post.location %></p>
-  <p>サブタイトル：<%= @post.sub_title %></p>
-  <p>内容：<%= @post.body %></p>
+  <div class="post-show-place">場所：<%= @post.location %></div>
+  <div class="post-show-sub-title">サブタイトル：<%= @post.sub_title %></div>
+  <div class="post-show-body">内容：<%= @post.body %></div>
   <% @post.images.each do |image| %>
     <%= image_tag image.to_s, size: '300x200' %>
   <% end %>
-
 
   <% if @post.user == current_user %>
     <%= link_to "編集", edit_post_path(@post) %>
@@ -36,7 +32,6 @@
   <div class="new-comment">
     <%= render 'comments/form', post: @post, comment: @comment %>
   </div>
+  <%= link_to t("button.back"), "/" %>
 </div>
-<%= link_to t("button.back"), "/" %>
-
 

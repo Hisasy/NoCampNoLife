@@ -1,11 +1,12 @@
- <main>
+ <!--<main>-->
   <div class="sliderArea">
     <div class="full-screen-o slider">
       <% @post_5.each do |post| %>
         <div class="slider-box">
           <div class="image"><%= link_to image_tag(post.images[0].to_s), post_path(post.id) %></div>
           <din class="post-content">
-            <div class="post-content-main-title">「<%= link_to post.main_title, post_path(post.id) %>」</div>
+            <div class="post-content-main-title">「<%= post.main_title %>」</div>
+            <p class="post-content-place"><%= post.location %></p>
             <% if post.date %>
               <div class="post-content-date"><%= post.date.strftime('%Y年%m月%d日') %></div>
             <% end %>
@@ -24,7 +25,7 @@
   <div class="post-area">
     <div class="inner">
       <h1 class="post-area-title">新着投稿一覧</h1>
-      <section class="post-list">
+      <div class="post-list">
         <% @posts.each do |post| %>
         <div class="post-box">
           <% if post.new_arrival? == true %>
@@ -35,18 +36,16 @@
           </div>
           <p class="main-title">「<%= post.main_title %>」</p>
           <p class="post-place"><%= post.location %></p>
-          <p class="post-info">
-            <% if post.date %>
+          <% if post.date %>
             <p class="post-date"><%= post.date.strftime('%Y年%m月%d日') %></p>
-            <% end %>
-          </p>
+          <% end %>
           <div class="post-like" id="like_buttons_<%= post.id %>">
             <%= render "likes/index_like", post: post %>
           </div>
           <p class="user-name">投稿者：<%= link_to post.user.name, user_path(post.user) %>さん</p>
         </div>
       <% end %>
-      </section>
+      </div>
     </div>
   </div>
-</main>
+<!--</main>-->
