@@ -1,9 +1,14 @@
-<h1>会員情報編集ページ</h1>
+<div class="user-edit">
+<div class="user-edit-title">会員情報編集ページ</div>
 
+<div class="user-edit-main">
 <%= form_with model:@user, local:true do |f| %>
+<div class="user-edit-image">
   <%= attachment_image_tag @user, :image, :fill, 100, 100, fallback: "no_image.jpg"%></br>
   <label for="inputImage">プロフィール画像</label>
   <%= f.attachment_field :image, placeholder: "プロフィール画像" %>
+</div>
+
 
   <div class="field">
     <%= f.label "ユーザーネーム" %><br />
@@ -17,7 +22,7 @@
 
   <div class="field">
     <%= f.label "自己紹介文" %><br />
-    <%= f.text_area :introduction, autofocus: true %>
+    <%= f.text_area :introduction, autofocus: true, :size=>"40x5" %>
   </div>
 
   <div class="field">
@@ -31,3 +36,6 @@
 
 <% end %>
 <%= link_to "退会する", users_quit_path %>
+<span class="back-button"><%= link_to t("button.back"), user_path(@user) %></span>
+</div>
+</div>

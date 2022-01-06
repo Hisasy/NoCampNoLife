@@ -1,4 +1,6 @@
-<h1><%= t("title.フォロワー一覧") %></h1>
+<div class="follows">
+
+<h2 class="follow-title"><%= t("title.フォロワー一覧") %></h2>
 
 <table>
   <% @users.each do |user| %>
@@ -11,3 +13,4 @@
 </table>
 
 <%= link_to t("button.back"), user_path %>
+</div>

@@ -1,4 +1,10 @@
 // <-----------user-show----------->
+.user-show-main {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .user-show {
  margin-bottom: 20px;
  margin-left: auto;
@@ -339,3 +345,80 @@ width: auto;
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+// <-----------user-edit----------->
+.user-edit {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+  background-color: #f8f8f8;
+}
+
+.user-edit-main {
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.user-edit-title {
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.user-edit-image {
+  margin-bottom: 10px;
+}
+
+.user-edit-image label {
+  margin-top: 30px;
+}
+
+.user-edit-main input {
+  margin-bottom: 15px;
+}
+
+.field {
+  margin-top: 15px;
+}
+
+.back-button {
+  margin-left: 200px;
+}
+
+// <-----------user-quit----------->
+.user-quit {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.quit-title {
+  padding-top: 50px;
+}
+
+.quit-body {
+  margin-top: 50px;
+}
+
+.quit-button {
+  margin-left: 100px;
+}
+
+.quit-buttons {
+  margin-top: 50px;
+}
+
+.follows {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.follow-title {
+  padding-top: 50px;
+}
+
+
