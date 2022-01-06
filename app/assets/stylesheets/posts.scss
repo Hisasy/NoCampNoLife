@@ -96,7 +96,7 @@
 }
 
 .post-content-place {
-  color: black;
+  color: #666;
   font-size: 13px;
   font-weight: 700;
   padding-left: 10px;
@@ -105,6 +105,11 @@
 
 .post-content-user {
   padding-left: 10px;
+}
+
+.post-content-user a {
+  color: #666;
+  font-weight: 700;
 }
 
 .likes-button {
@@ -178,16 +183,6 @@
   font-weight: 700;
 }
 
-// .post-date {
-//   box-sizing: border-box;
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   padding: 10px;
-//   color: #fff;
-// }
-
 .main-title {
   background-color: #FFFFDD;
   padding: 14px 10px;
@@ -210,6 +205,11 @@
   margin-left: 10px;
   font-size: 15px;
   color: #666;
+}
+
+.user-name a {
+  color: #666;
+  font-weight: 700;
 }
 
 .label-box {
@@ -241,29 +241,123 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   text-align: center;
 }
 
 .post-show-header {
+  width: 900px;
   margin-top: 40px;
   padding: 2px;
   border-bottom: 3px solid #D3D3D3;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.post-show-header p {
+.post-show-main-title {
   font-size: 25px;
   font-weight: 700;
-}
-
-.post-show-header span {
-
+  text-align: left;
 }
 
 .post-show-user {
-  font-size: 30px;
-  font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
 }
+
+.post-show-place-icon {
+  // display: table-cell;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.place-icon-image {
+  background-image: url('place.jpeg');
+  border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.post-show-place {
+  font-size: 16px;
+  font-weight: 500;
+  // color: #808080;
+}
+
+.date-icon-image {
+  background-image: url('date.jpeg');
+  // border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 30px;
+}
+
+.post-show-date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+// .post-show-user {
+//   font-size: 30px;
+//   font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+// }
+
+.post-show-main {
+  margin: auto;
+  width: 900px;
+}
+
+.post-show-sub-title {
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-show-image-area {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f9fa;
+}
+
+.post-show-image-area > div {
+  margin: 20px;
+  background-color: #fff;
+}
+
+.post-show-body-area {
+  height: auto;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.buttons {
+  padding-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.delete-button {
+  margin-left: 20px;
+}
+
+// <-----------post-edit----------->
+// .post-edit {
+//   height: auto;
+//   margin-bottom: 120px;
+// }
 
 // <-----------comment-area----------->
 .comment-area {

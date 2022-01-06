@@ -1,48 +1,84 @@
-<% if user_signed_in? && @user.id == current_user.id %>
-  <h1>マイページ</h1>
-  <p><%= link_to "会員情報を編集する", edit_user_path(@user) %></p>
-  <p><%= link_to "いいねした投稿", likes_user_path(@user) %></p>
-<% else %>
-  <h3><%= @user.name %>さん</h3>
-<% end %>
+<div class="user-show">
+  <div class="user-show-header">
 
-<!--ユーザー情報表示-->
-<% if user_signed_in? && @user.id == current_user.id %>
-  <h3><%= @user.name %></h3>
-<% end %>
-<div class="profile-image">
-  <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
-</div>
-<h4>お住まい：<%= @user.address %></h4>
-<h4>自己紹介：<%= @user.introduction %></h4>
+    <div class="user-show-information">
+      <p class="profile-image">
+        <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
+        <!--% if user_signed_in? && @user.id == current_user.id %>-->
+          <span class="user-show-name"><%= @user.name %></span>
+        <!--% end %>-->
+          <span class="place">
+          <span class="user-show-place-icon-image"></span>
+          <span class="user-show-place"><%= @user.address %></span>
+          <% if user_signed_in? && @user.id == current_user.id %>
+            <!--<div class="user-show-mypage">マイページ</div>-->
+            <span class="user-show-buttons"><%= link_to "会員情報を編集する", edit_user_path(@user) %>
+              <!--<span class="user-show-like-posts">%= link_to "いいねした投稿", likes_user_path(@user) %></span>-->
+              <span class="user-show-like-posts"><%= link_to "いいねした投稿", likes_user_path(@user) %></span>
+            </span>
+          <% end %>
+        </span>
+        <p class="user-likes-post-button">
+          <span class="user-show-profile"><%= @user.introduction %></span>
+        </p>
 
-<!--フォロワー数表示-->
-<div class="follower">
-  <%= link_to followers_user_path(@user.id) do %>
-    <h5 style="color: black;">フォロワー<%= @user.followers.count %>人</h5>
-  <% end %>
-</div>
+      </p>
+    </div>
+  </div>
 
-<!--フォロー数表示-->
-<div class="follow">
-  <%= link_to following_user_path(@user.id) do %>
-    <h5 style="color: black;">フォロー<%= @user.following.count %>人</h5>
-  <% end %>
 </div>
 
-<!--フォローボタン-->
-<div>
-  <%= render "follow_form" %>
+  <!--フォロワー数表示-->
+<div class="follow-area">
+  <ul style="width: 200px;">
+    <li>
+      <%= link_to followers_user_path(@user.id) do %>
+        フォロワー<span><%= @user.followers.count %>人</span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to following_user_path(@user.id) do %>
+        フォロー<span><%= @user.following.count %>人</span>
+      <% end %>
+    </li>
+
+  </ul>
+
+  <!--フォロー数表示-->
+  <!--<div class="follow">-->
+
+  <!--</div>-->
+
+  <!--フォローボタン-->
+  <div>
+    <%= render "follow_form" %>
+  </div>
 </div>
 
-<!--ユーザーの投稿一覧表示-->
-<h3>投稿</h3>
-<% @posts.each do |post| %>
-<div>
-  <%= link_to post_path(post.id) do %>
-    <%= image_tag post.images[0].to_s %>
-  <% end %>
-  <p>メインタイトル：<%= link_to post.main_title, post_path(post.id) %></p>
-  <p>行った日：<%= post.date.strftime('%Y/%m/%d') %></p>
-</div>
-<% end %>
+
+  <!--ユーザーの投稿一覧表示-->
+  <div class="user-show-post-area">
+    <div class="inner">
+      <% if user_signed_in? && @user.id == current_user.id %>
+        <h1 class="post-area-title">あなたの投稿一覧</h1>
+      <% else %>
+        <h1 class="post-area-title"><%= @user.name %>さんの投稿一覧</h1>
+      <% end %>
+      <div class="post-list">
+        <% @posts.each do |post| %>
+          <div class="post-box">
+            <div class="background-image">
+              <%= link_to image_tag(post.images[0].to_s, size: '300x200'), post_path(post.id) %>
+            </div>
+            <p class="main-title">「<%= post.main_title %>」</p>
+            <p class="post-place"><%= post.location %></p>
+            <% if post.date %>
+              <p class="post-date"><%= post.date.strftime('%Y年%m月%d日') %></p>
+            <% end %>
+            <div class="post-like" id="like_buttons_<%= post.id %>">
+              <%= render "likes/index_like", post: post %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>

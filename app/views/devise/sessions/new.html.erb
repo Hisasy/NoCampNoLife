@@ -1,6 +1,7 @@
-<div class="login-new">
-  <h2>ログイン</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="login-area">
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :メールアドレス %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -21,8 +22,10 @@
   <div class="actions">
     <%= f.submit "ログインする" %>
   </div>
-  <% end %>
+<% end %>
 
+<div class="links">
   <%= render "devise/shared/links" %>
 </div>
 
+</div>

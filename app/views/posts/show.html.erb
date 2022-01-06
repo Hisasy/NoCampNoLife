@@ -1,29 +1,44 @@
 <div class="post-show">
   <div class="post-show-header">
-    <p>「<%= @post.main_title %>」
-      <span><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</span>
+    <p class="post-show-main-title">「 <%= @post.main_title %> 」
+      <span class="post-show-user" ><%= link_to @post.user.name, user_path(@post.user) %>さんの投稿</span>
     </p>
+    <div class="post-show-place-icon">
+      <div class="place-icon-image"></div>
+      <span class="post-show-place"><%= @post.location %></span>
+      <% if @post.date %>
+        <div class="date-icon-image"></div>
+        <span class="post-show-date"><%= @post.date.strftime('%Y年%m月%d日') %></span>
+      <% end %>
+    </div>
   </div>
-  <% if @post.date %>
-    <div class="post-show-date"><%= @post.date.strftime('%Y年%m月%d日') %></div>
-  <% end %>
-  <div class="post-show-place">場所：<%= @post.location %></div>
-  <div class="post-show-sub-title">サブタイトル：<%= @post.sub_title %></div>
-  <div class="post-show-body">内容：<%= @post.body %></div>
-  <% @post.images.each do |image| %>
-    <%= image_tag image.to_s, size: '300x200' %>
-  <% end %>
 
-  <% if @post.user == current_user %>
-    <%= link_to "編集", edit_post_path(@post) %>
-  <% end %>
-  <% if @post.user == current_user %>
-    <%= link_to "削除", post_path(@post), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"} %>
-  <% end %>
+  <div class="post-show-main">
+    <div class="post-show-sub-title"><%= @post.sub_title %></div>
+    <div class="post-show-image-area">
+      <% @post.images.each do |image| %>
+        <div><%= image_tag image.to_s, size: '400x270' %></div>
+      <% end %>
+    </div>
+    <div class="post-show-body-area">
+      <div class="post-show-body-name"><%= link_to @post.user.name, user_path(@post.user) %></div>
+      <!--いいね機能-->
+      <div id="like_buttons_<%= @post.id %>">
+        <%= render "likes/like", post: @post %>
+      </div>
+      <div class="post-show-body"><%= @post.body %></div>
+    </div>
 
-  <!--いいね機能-->
-  <div id="like_buttons_<%= @post.id %>">
-    <%= render "likes/like", post: @post %>
+    <div class="buttons">
+      <% if @post.user == current_user %>
+        <p class="edit-button">
+          <%= link_to "編集", edit_post_path(@post) %>
+      <% end %>
+      <% if @post.user == current_user %>
+          <span class="delete-button"><%= link_to "削除", post_path(@post), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"} %></span>
+        </p>
+      <% end %>
+    </div>
   </div>
 
   <!--コメント一覧-->

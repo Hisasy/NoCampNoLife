@@ -1,0 +1,341 @@
+// <-----------user-show----------->
+.user-show {
+ margin-bottom: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 10px;
+}
+
+.user-show-header {
+ width: 900px;
+ text-align: center;
+ margin-top: 40px;
+ margin-left: auto;
+ margin-right: auto;
+ border-bottom: 3px solid #D3D3D3;
+}
+
+// .user-show-mypage {
+// font-size: 30px;
+// color: black;
+// }
+
+.user-show-buttons {
+ margin: 15px;
+}
+
+.user-show-like-posts {
+// margin-left: 30px;
+width: auto;
+}
+
+.user-show-user-name {
+ font-size: 30px;
+ color: black;
+}
+
+.user-show-information {
+ text-align: center;
+}
+
+.user-show-name {
+ font-size: 30px;
+ color: black;
+ margin-left: 50px;
+}
+
+.profile-image {
+  margin-left: 50px;
+  text-align: left;
+  margin-bottom: auto;
+  // display: relative;
+}
+
+.place {
+  margin-left: 50px;
+  width: auto;
+
+}
+
+.user-show-place-icon-image {
+ background-image: url('place.jpeg');
+ border-radius: 50%;
+ display: inline-block;
+ width: 15px;
+ height: 15px;
+ background-position: center center;
+ background-size: cover;
+}
+
+.user-show-place {
+ font-size: 16px;
+ font-weight: 500;
+ margin-right: 20px;
+}
+
+.follow-button {
+  margin-left: 50px;
+}
+
+.follow-area ul {
+  display: table;
+  table-layout: fixed;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.follow-area li {
+  display: table-cell;
+  padding-right: 0 10px;
+}
+
+.follow-area ul a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+}
+
+.follow-area ul a span {
+  margin-top: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+  color: #333;
+}
+
+.user-likes-post-button {
+  text-align: left;
+  padding-left: 140px;
+}
+
+.user-show-profile {
+  font-size: 15px;
+  color: black;
+  text-align: left;
+  padding-left: 70px;
+}
+
+.user-show-like-posts a {
+  // margin-left: 30px;
+  color: #888;
+  padding-left: 30px;
+}
+
+.user-show-buttons a {
+  margin-left: 20px;
+  color: #888;
+}
+
+
+// <-----------follow-area----------->
+.follow-area {
+  height: auto;
+  text-align: center;
+}
+
+
+// <-----------user-show-post-area----------->
+.user-show-post-area {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background: #f7f7f7;
+  min-height: 500px;
+
+}
+
+// <-----------user-like-post----------->
+
+.inner {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5px;
+  grid-auto-rows: auto;
+}
+
+.post-area-title {
+  width: 100%;
+  // background-color: blue;
+  padding: 20px;
+  color: #333333;
+  text-align: center;
+}
+
+.post-box {
+  border: solid #CCCCCC 3px;
+  position: relative;
+  width: 306px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 10px;
+}
+
+.background-image {
+  width: 100%;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // position: relative;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
+}
+
+.post-date {
+  box-sizing: border-box;
+  // position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 10px;
+  color: #666;
+  font-size: 13px;
+  // text-shadow: 0 0 2px #666;
+  font-weight: 700;
+}
+
+.main-title {
+  background-color: #FFFFDD;
+  padding: 14px 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.post-place {
+  padding: 0 10px 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+.post-like {
+  margin-left: 10px;
+}
+
+
+.post-area {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background: #f7f7f7;
+  min-height: 500px;
+
+}
+
+.inner {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5px;
+  grid-auto-rows: auto;
+}
+
+.post-area-title {
+  width: 100%;
+  // background-color: blue;
+  padding: 20px;
+  color: #333333;
+  text-align: center;
+}
+
+.post-box {
+  border: solid #CCCCCC 3px;
+  position: relative;
+  width: 306px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 10px;
+}
+
+.background-image {
+  width: 100%;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // position: relative;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
+}
+
+.post-date {
+  box-sizing: border-box;
+  // position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 10px;
+  color: #666;
+  font-size: 13px;
+  // text-shadow: 0 0 2px #666;
+  font-weight: 700;
+}
+
+.main-title {
+  background-color: #FFFFDD;
+  padding: 14px 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.post-place {
+  padding: 0 10px 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+.post-like {
+  margin-left: 10px;
+}
+
+.user-name {
+  margin-left: 10px;
+  font-size: 15px;
+  color: #666;
+}
+
+.user-name a {
+  color: #666;
+  font-weight: 700;
+}
+
+.label-box {
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-top: 35px solid #FA8072;
+  border-right: 35px solid #FA8072;
+  border-bottom: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-radius: 4px 0;
+}
+
+.label-name {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 6px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
