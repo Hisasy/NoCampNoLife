@@ -7,7 +7,8 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :email , presence: true, length: { maximum: 60 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   validates :name , presence: true, length: { maximum: 30 }
-  
+  validates :introduction , length: { maximum: 75 }
+
 
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy

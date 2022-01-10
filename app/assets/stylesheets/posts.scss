@@ -65,20 +65,20 @@
   padding-bottom: 30px;
 }
 
-
+// <-----------slide-area----------->
 .slider-box {
   position: relative;
   box-shadow: 0 0 5px #ccc;
   border: solid #cccccc;
 }
 
-// .post-content {
-//   // position: absolute;
-//   margin-top: auto;
-//   width: auto;
-//   height: 130px;
-//   background-color: #f7f7f7;
-// }
+
+
+
+.slider-box image {
+  width: 100px;
+  height: 80px;
+}
 
 .post-content-main-title {
   // background-color: ;
@@ -118,10 +118,12 @@
 }
 
 
+
+
 // <-----------post-index----------->
 .post-area {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   background: #f7f7f7;
   min-height: 500px;
 
@@ -132,19 +134,19 @@
   margin: 0 auto;
 }
 
-.post-list {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 5px;
-  grid-auto-rows: auto;
-}
-
 .post-area-title {
   width: 100%;
   // background-color: blue;
   padding: 20px;
   color: #333333;
   text-align: center;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5px;
+  grid-auto-rows: auto;
 }
 
 .post-box {
@@ -169,6 +171,11 @@
   -webkit-border-radius: 4px;
   border-radius: 4px 4px 0 0;
   border-radius: 4px;
+}
+
+.background-image a img {
+  width: 300px;
+  height: 200px;
 }
 
 .post-date {
@@ -267,7 +274,6 @@
 }
 
 .post-show-place-icon {
-  // display: table-cell;
   vertical-align: top;
   text-align: left;
   padding-left: 10px;
@@ -306,11 +312,6 @@
   font-weight: 500;
   margin-left: 2px;
 }
-
-// .post-show-user {
-//   font-size: 30px;
-//   font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
-// }
 
 .post-show-main {
   margin: auto;

@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
 
   def quit
-    @uuser = current_user
+    @user = current_user
   end
 
   def out
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     flash[:notice] = "退会処理が完了いたしました"
     redirect_to "/"
   end
-  
+
   def following
     # @userがフォローしているユーザー
     @user = User.find(params[:id])

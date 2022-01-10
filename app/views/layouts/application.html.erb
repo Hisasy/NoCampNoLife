@@ -19,7 +19,7 @@
       <div class="header-top-content">
         <%= link_to "/", class:"header-title" do %>
           <div>No Camp No Life</div>
-          <div class="header-sub-title">～ キャンプをもっと楽しく ～</div>
+          <div class="header-sub-title">- キャンプ専用SNS -</div>
         <% end %>
 
         <div class="nav">
@@ -47,17 +47,11 @@
         <!--  %= content_tag(:div, value, class: "#{key}") %>-->
         <!--% end %>-->
       <!--</main>-->
-    <main>
+    <main class="mb-auto">
       <%= yield %>
     </main>
     <footer>
-      <ul class="footer-menu">
-        <li>home ｜</li>
-        <li>about ｜</li>
-        <li>service ｜</li>
-        <li>Contact Us</li>
-      </ul>
-      <p>COPYRIGHT © NoCampNoLifeInc. All rights Reserved.</p>
+      <p class="copyright mt-5">COPYRIGHT © NoCampNoLife, Inc. All rights Reserved.</p>
     </footer>
     <!--</div>-->
     </div>

@@ -13,14 +13,11 @@
  *= require_tree .
  *= require_self
  */
-
-
  @import "bootstrap";
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
  @import "slick-theme";
  @import "slick";
-
  // .SiteWrapper {
  //  display: flex;
  //  flex-direction: column;
@@ -30,6 +27,8 @@
  * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  // color: #6c6b6b;
  }
 
  html {
@@ -44,7 +43,8 @@
   flex-direction: column;
  }
 
- main {
+ .main {
+  // display: block;
   height: 100%;
   width: 100%;
   flex: 1;
@@ -67,7 +67,6 @@ header {
  width: 100%;
  padding: 10px 0 20px 0;
  // position: fixed;
- box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
  top: 0;
  height: 20vh;
  background-image: url('1.jpg');
@@ -145,7 +144,7 @@ header {
 }
 
 .header-center {
- margin-top: -25px;
+ margin-top: -40px;
  text-align: center;
  justify-content: center;
  align-items: center;
@@ -168,20 +167,12 @@ header {
 
 footer{
  width: 100%;
- height: 100px;
+ height: 120px;
  color: black;
  text-align: center;
  background: #f2f2f2;
  position: absolute;
- bottom: 0
-}
-
-.footer-menu {
- margin-top: 18px;
-}
-
-ul.footer-menu li {
- display: inline;
+ bottom: 0;
 }
 
 .login-area {
@@ -226,3 +217,548 @@ ul.footer-menu li {
  margin-bottom: 10px;
 }
 
+
+@media screen and (max-width: 425px) {
+header {
+ width: 100%;
+ padding: 10px 0 20px 0;
+ // position: fixed;
+ box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+ top: 0;
+ height: 15vh;
+ background-image: url('1.jpg');
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ opacity: 0.8;
+}
+
+.header-top-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ // margin: 10px 0 30px 0;
+}
+
+.header-title {
+ font-size: 10px;
+ text-decoration: none;
+ font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+ margin-left: 2%;
+ color: whitesmoke;
+ text-align: center;
+}
+
+.header-sub-title {
+ font-size: 5px;
+ // padding-right: 5px;
+ font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+ color: whitesmoke;
+}
+
+footer{
+ width: 100%;
+ height: 120px;
+ color: black;
+ text-align: center;
+ background: #f2f2f2;
+ position: absolute;
+ bottom: 0;
+ font-size: 12px;
+}
+
+.nav {
+ font-size: 9px;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ padding: 1vh 0;
+ // background-color: green;
+}
+
+.header-center {
+ // margin-top: -25px;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ color: whitesmoke;
+ font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+ margin-top: 5px;
+}
+
+.header-center-top {
+ font-weight: bold;
+ font-size: 10px;
+ color: whitesmoke;
+}
+
+.header-center-bottom {
+ font-weight: bold;
+ font-size: 15px;
+ color: whitesmoke;
+}
+
+// <-----------post-slider-area----------->
+.post-content {
+ font-size: 2px;
+}
+
+.slick-slide img {
+  width: 100%;
+  // height: ;
+  // max-height: 300px;
+  // min-height: 100px;
+}
+
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: 5vh;
+  height: 280px;
+}
+
+.slider-box {
+  position: relative;
+  box-shadow: 0 0 5px #ccc;
+  border: solid #cccccc;
+  height: 300px;
+}
+
+// .slider-box {
+//   height: 150px;
+//   position: relative;
+//   box-shadow: 0 0 5px #ccc;
+//   border: solid #cccccc;
+// }
+
+.post-content-main-title {
+  // background-color: ;
+  padding: 14px 5px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 5px;
+}
+
+.post-content-date {
+  color: #666;
+  font-size: 6px;
+  font-weight: 700;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.post-content-place {
+  color: #666;
+  font-size: 6px;
+  font-weight: 700;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.post-content-user {
+  font-size: 6px;
+  padding-left: 5px;
+}
+
+.post-content-user a {
+  color: #666;
+  font-weight: 700;
+}
+
+.likes-button {
+  font-size: 6px;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+// <-----------post-area----------->
+
+.post-area {
+  margin-bottom: 120px;
+  background: #f7f7f7;
+  min-height: 1000px;
+
+}
+
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.post-area-title {
+  width: 100%;
+  // background-color: blue;
+  padding: 20px;
+  color: #333333;
+  text-align: center;
+  font-size: 15px;
+}
+
+.post-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 5px;
+  grid-auto-rows: auto;
+}
+
+.post-box {
+  border: solid #CCCCCC 3px;
+  position: relative;
+  width: 150px;
+  // height: 100px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-title {
+  background-color: #FFFFDD;
+  padding: 14px 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+.post-place {
+  padding: 0 10px 0 10px;
+  font-size: 8px;
+  font-weight: 700;
+  color: #666;
+}
+
+.post-date {
+  box-sizing: border-box;
+  // position: absolute;
+  top: 0;
+  right: 0;
+  padding-left: 10px;
+  color: #666;
+  font-size: 8px;
+  // text-shadow: 0 0 2px #666;
+  font-weight: 700;
+}
+
+.post-like {
+  margin-left: 10px;
+  font-size: 8px;
+}
+
+.user-name {
+  margin-left: 10px;
+  font-size: 8px;
+  color: #666;
+}
+
+.user-name a {
+  color: #666;
+  font-weight: 700;
+}
+
+
+.background-image a img {
+  width: 144px;
+  height: 100px;
+}
+
+.label-box {
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-top: 20px solid #FA8072;
+  border-right: 20px solid #FA8072;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-radius: 4px 0;
+}
+
+.label-name {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 6px;
+  margin-right: 1px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  font-size: 2px;
+}
+
+// <-----------user-show-area----------->
+.user-show-main {
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.user-show-header {
+ width: 100%;
+ text-align: center;
+ margin-top: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ border-bottom: 3px solid #D3D3D3;
+ padding: 0 9px;
+}
+
+.profile-image-box {
+ width: 50px;
+ height: 50px;
+ margin-left: 20px;
+}
+
+.profile-image-box img {
+ width: 50px;
+ height: 50px;
+}
+
+.profile-name-box {
+  width: 150px;
+  height: 60px;
+  margin-left: 20px;
+}
+
+.profile-name {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'YuGothic','Yu Gothic','Hiragino Kano Gothic ProN','ヒラギノ角ゴ ProN W3';
+ margin-top: 15px;
+}
+
+.profile-introduction {
+  margin-top: 15px;
+  height: auto;
+  font-size: 8px;
+}
+
+.profile-place-box {
+  width: 100px;
+  height: 60px;
+  font-size: 5px;
+  padding-top: 15px;
+  margin-right: 10px;
+}
+
+.user-show-buttons {
+  margin-top: 15px;
+  font-size: 5px;
+}
+
+.user-show-like-posts {
+  margin-top: 5px;
+  font-size: 5px;
+}
+
+.user-show-name {
+ font-size: 10px;
+ color: black;
+ margin-left: 50px;
+ padding-right: 10px;
+}
+
+.user-show-place-icon-image {
+background-image: url('place.jpeg');
+border-radius: 50%;
+display: inline-block;
+width: 10px;
+height: 10px;
+background-position: center center;
+background-size: cover;
+}
+
+.user-show-user-name {
+ font-size: 10px;
+ color: black;
+}
+
+.user-show-information {
+ text-align: left;
+}
+
+
+
+.profile-image img {
+ width: 50px;
+ height: 50px;
+}
+
+.post-box {
+ // margin-right: 2px;
+ // margin-right: auto;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5px;
+  grid-auto-rows: auto;
+}
+
+.user-show-post-area {
+  // margin-top: 50px;
+  margin-bottom: 120px;
+  background: #f7f7f7;
+
+}
+
+.follow-area {
+  height: auto;
+  text-align: center;
+}
+
+// <-----------post-new-area----------->
+.post-form-title {
+  font-size: 25px;
+}
+
+.body-form textarea {
+ width: 300px;
+}
+
+.post-form-sub-title {
+  font-size: 12px;
+}
+
+// <-----------post-show-area----------->
+.post-show {
+  width: auto;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.post-show-header {
+  width: auto;
+  margin-top: 20px;
+  border-bottom: 3px solid #D3D3D3;
+}
+
+.post-show-main-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.post-show-user {
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.post-show-place-icon {
+  vertical-align: top;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.place-icon-image {
+  width: 10px;
+  height: 10px;
+}
+
+.post-show-place {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.date-icon-image {
+  width: 10px;
+  height: 10px;
+}
+
+.post-show-date {
+  font-size: 12px;
+}
+
+.post-show-main {
+  width: auto;
+}
+
+.post-show-sub-title {
+  padding-top: 15px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-show-image-area > div {
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+.post-show-image-area img {
+ width: 300px;
+ height: auto;
+}
+
+.post-show-body-area {
+ width: auto;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+.new-comment textarea {
+ width: 300px;
+}
+
+// <-----------user-edit----------->
+.user-edit {
+ margin-bottom: 120px;
+}
+
+.user-edit-main {
+  margin-top: 20px;
+}
+
+.user-edit-title {
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.user-edit-image label {
+  margin-top: 15px;
+}
+
+.user-edit-main textarea {
+ width: 250px;
+}
+
+// <-----------user-follows----------->
+.follow-user-image img {
+ width: 50px;
+ height: 50px;
+}
+
+.follow-user-introduction {
+ font-size: 10px;
+}
+
+.follow-user-name {
+ font-size: 10px;
+}
+
+.follow-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}

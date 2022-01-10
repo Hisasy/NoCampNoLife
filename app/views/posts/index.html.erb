@@ -4,7 +4,7 @@
       <% @post_5.each do |post| %>
         <div class="slider-box">
           <div class="image"><%= link_to image_tag(post.images[0].to_s), post_path(post.id) %></div>
-          <din class="post-content">
+          <div class="post-content">
             <div class="post-content-main-title">「<%= post.main_title %>」</div>
             <p class="post-content-place"><%= post.location %></p>
             <% if post.date %>
@@ -16,7 +16,7 @@
               <%= render "likes/index_like", post: post %>
               </div>
             </div>
-          </din>
+          </div>
         </div>
       <% end %>
     </div>
@@ -32,7 +32,7 @@
               <%= render 'new_label' %>
             <% end %>
             <div class="background-image">
-              <%= link_to image_tag(post.images[0].to_s, size: '300x200'), post_path(post.id) %>
+              <%= link_to image_tag(post.images[0].to_s), post_path(post.id) %>
             </div>
             <p class="main-title">「<%= post.main_title %>」</p>
             <p class="post-place"><%= post.location %></p>

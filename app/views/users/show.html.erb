@@ -1,33 +1,21 @@
 <div class="user-show-main">
 
-<div class="user-show">
-  <div class="user-show-header">
-
-    <div class="user-show-information">
-      <p class="profile-image">
-        <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
-        <!--% if user_signed_in? && @user.id == current_user.id %>-->
-          <span class="user-show-name"><%= @user.name %></span>
-        <!--% end %>-->
-          <span class="place">
-          <span class="user-show-place-icon-image"></span>
-          <span class="user-show-place"><%= @user.address %></span>
-          <% if user_signed_in? && @user.id == current_user.id %>
-            <!--<div class="user-show-mypage">マイページ</div>-->
-            <span class="user-show-buttons"><%= link_to "会員情報を編集する", edit_user_path(@user) %>
-              <!--<span class="user-show-like-posts">%= link_to "いいねした投稿", likes_user_path(@user) %></span>-->
-              <span class="user-show-like-posts"><%= link_to "いいねした投稿", likes_user_path(@user) %></span>
-            </span>
-          <% end %>
-        </span>
-        <p class="user-likes-post-button">
-          <span class="user-show-profile"><%= @user.introduction %></span>
-        </p>
-
-      </p>
-    </div>
+<div class="user-show-header">
+  <div class="profile-image-box" style="float:left;">
+    <%= attachment_image_tag @user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %>
   </div>
-
+  <div class="profile-name-box" style="float:left;">
+    <div class="profile-name"><%= @user.name %></div>
+    <div class="profile-introduction"><%= @user.introduction %></div>
+  </div>
+  <div class="profile-place-box" style="float:right;">
+    <div class="user-show-place-icon-image"></div>
+    <%= @user.address %>
+    <% if user_signed_in? && @user.id == current_user.id %>
+      <div class="user-show-buttons"><%= link_to "会員情報を編集する", edit_user_path(@user) %></div>
+      <div class="user-show-like-posts"><%= link_to "いいねした投稿", likes_user_path(@user) %></div>
+    <% end %>
+  </div>
 </div>
 
   <!--フォロワー数表示-->

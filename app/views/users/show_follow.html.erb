@@ -1,16 +1,23 @@
 <div class="follows">
-  
+
 <h2 class="follow-title"><%= t("title.フォロー一覧") %></h2>
 
-<table>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= attachment_image_tag user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %></td>
-      <td><%= link_to user.name, user_path(user) %></td>
-      <td><%= user.introduction %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="follow-inner">
+  <div class="follow-area-s">
+    <ul>
+      <% @users.each do |user| %>
+      <li>
+        <div class="follow-user">
+          <p class="follow-user-image"><%= attachment_image_tag user, :image, :fill, 100, 100, format:'jpeg', fallback: "no_image.jpg" %></p>
+          <p class="follow-user-name"><%= link_to user.name, user_path(user) %></p>
+          <p class="follow-user-introduction"><%= user.introduction %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
 
 <%= link_to t("button.back"), user_path %>
 </div>
