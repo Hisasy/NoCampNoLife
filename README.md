@@ -20,12 +20,9 @@
 
 ### 主な利用シーン
 
-キャンプ中もしくはキャンプ後
-時間があるとき
+キャンプに行った記録を残したいとき
 
 ## 設計書
-
-・[WBS](https://docs.google.com/spreadsheets/d/1VPZKwoelJ6GSsDgHiKasNYXB_mfANHe3QI6CQPriuiY/edit?usp=sharing)
 
 ・[UI flows](https://drive.google.com/file/d/1qQozuvA3fvDWsKrJvTJU7UYWbh6AMpf2/view?usp=sharing)
 
