@@ -69,7 +69,7 @@ header {
  // position: fixed;
  top: 0;
  height: 20vh;
- background-image: url('1.jpg');
+ background-image: image-url('1.jpg');
  background-repeat: no-repeat;
  background-position: center left;
  background-size: cover;
@@ -226,7 +226,7 @@ header {
  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
  top: 0;
  height: 15vh;
- background-image: url('1.jpg');
+ background-image: image-url('1.jpg');
  background-repeat: no-repeat;
  background-position: center left;
  background-size: cover;
@@ -564,7 +564,7 @@ footer{
 }
 
 .user-show-place-icon-image {
-background-image: url('place.jpeg');
+background-image: image-url('place.jpeg');
 border-radius: 50%;
 display: inline-block;
 width: 10px;

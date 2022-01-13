@@ -282,7 +282,7 @@
 }
 
 .place-icon-image {
-  background-image: url('place.jpeg');
+  background-image: image-url('place.jpeg');
   border-radius: 50%;
   display: inline-block;
   width: 15px;
@@ -298,7 +298,7 @@
 }
 
 .date-icon-image {
-  background-image: url('date.jpeg');
+  background-image: image-url('date.jpeg');
   // border-radius: 50%;
   display: inline-block;
   width: 15px;
